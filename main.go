@@ -10,3 +10,8 @@ func main() {
 	result := agent.Run(os.Args[1:])
 	fmt.Println(result)
 }
+
+// Version returns the agent version.
+func Version() string {
+	return "0.1.0"
+}
