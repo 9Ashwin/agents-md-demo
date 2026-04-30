@@ -1,10 +1,5 @@
 name: Update AGENTS.md
 on:
-  push:
-    branches: [master]
-    paths:
-      - "**.go"
-      - "go.mod"
   workflow_dispatch: {}
 
 permissions:
