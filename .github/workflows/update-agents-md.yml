@@ -1,7 +1,7 @@
 name: Update AGENTS.md
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - "**.go"
       - "go.mod"
@@ -20,5 +20,7 @@ jobs:
       target_files: AGENTS.md
       output_mode: pr
       pr_title: "chore: auto-update AGENTS.md"
+      anthropic_base_url: https://api.deepseek.com/anthropic
+      model: deepseek-v4-pro
     secrets:
-      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
